@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title_head %}
+<title>crear paleta</title>
+{% endblock title_head %}
+
+{% block h1_header %}
+crear paleta
+{% endblock h1_header %}
+
+{% block main %}
+ 
+<!--
+<form action="/paletas" method='POST'>
+    {% csrf_token %}
+    <label for="marca">marca</label>
+    <input type="text" name='marca' placeholder='Laravel'>
+    <label for="descripcion">descripcion</label>
+    <input type="text" name='descripcion' placeholder='ejemplo de descripcion'>
+    <label for="anio">anio</label>
+    <input type="number" name='anio' placeholder='2020'>
+    <input type="submit" value="Crear">
+    {% comment %} <button type='button'></button> boton que no establece el submit {% endcomment %}
+</form> FORMULARIO FORMA HTML
+-->
+
+<form action="" method='POST'>
+    {% csrf_token %}
+    {{formulario}}
+    <input type="submit" value="Crear">
+</form>
+
+{% endblock main %}
