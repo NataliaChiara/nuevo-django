@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title_head %}
+<title>Actualizar paleta</title>
+{% endblock title_head %}
+
+{% block h1_header %}
+Actualizar paleta
+{% endblock h1_header %}
+
+{% block main %}
+
+<form action="" method='POST'>
+    {% csrf_token %}
+    {{formulario}}
+    <input type="submit" value="Actualizar">
+</form>
+{% endblock main %}

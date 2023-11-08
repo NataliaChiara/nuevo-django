@@ -18,7 +18,7 @@ Paletas
 {% if listado_de_paletas %}
 <ul>
     {% for paleta in listado_de_paletas %}
-    <li>{{paleta}}</li>
+    <li>{{paleta}} --- <a href={% url 'detalle_paleta' paleta.id %}>Ver más</a> | <a href={% url 'eliminar_paleta' paleta.id %}>Eliminar</a> | <a href={% url 'actualizar_paleta' paleta.id %}>Actualizar</a></li>
     {% endfor %}
 </ul>
 {% else %}
