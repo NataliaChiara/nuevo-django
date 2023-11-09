@@ -12,7 +12,18 @@ crear automovil
 
 <form action="" method='POST'>
     {% csrf_token %}
-    {{form}}
+    <p>
+        marca {{form.marca}}
+    </p>
+    <p>
+        modelo {{form.modelo}}
+    </p>
+    <p>
+        descripcion {{form.descripcion}}
+    </p>
+    <p>
+        fecha de creacion {{form.fecha_creacion}}
+    </p>
     <p>el formato de la fecha es mes/dia/año</p>
     <input type="submit" value="Crear">
 </form>
