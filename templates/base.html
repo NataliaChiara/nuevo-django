@@ -24,7 +24,12 @@
                 <a class="btn btn-primary" href="{% url 'login' %}">Iniciar sesión</a>
                 <a class="btn btn-secondary" href="{% url 'registro' %}">Registrarse</a>
                 {% else %}
-                <a class="navbar-brand" href='#'>{{request.user.username}}</a>
+                <a class="navbar-brand" href={% url 'editar_perfil' %}>
+                    {% if request.user.datosextra.avatar %}
+                        <img src={{request.user.datosextra.avatar.url}} height='40px' alt="avatar">
+                    {% endif %}
+                    {{request.user.username}}
+                </a>
                 <a class="btn btn-warning" href="{% url 'logout' %}">Cerrar sesión</a>
                 {% endif %}
             </div>
